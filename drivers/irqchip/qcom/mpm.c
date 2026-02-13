@@ -576,7 +576,11 @@ static int msm_mpm_init(struct device_node *node)
 		goto set_wake_irq_err;
 	}
 
+#ifdef CONFIG_MSM_PM
 	return register_system_pm_ops(&pm_ops);
+#else
+	return 0;
+#endif
 
 set_wake_irq_err:
 	free_irq(dev->ipc_irq, msm_mpm_irq);
