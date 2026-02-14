@@ -52,7 +52,11 @@ static char tp_lockdown_info[128];
 static char tp_fw_version[10];
 
 static char tp_info_summary[80] = "";
+#ifdef CONFIG_QPNP_SMBCHARGER
 extern int set_usb_charge_mode_par;
+#else
+static int set_usb_charge_mode_par;
+#endif
 
 int gt9xx_id;
 int gt9xx_flag;

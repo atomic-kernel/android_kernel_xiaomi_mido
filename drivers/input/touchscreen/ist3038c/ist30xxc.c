@@ -73,7 +73,11 @@ int ist30xx_key_x[] = KEY_COORD_X;
 #endif
 
 struct ist30xx_data *ts_data;
+#ifdef CONFIG_QPNP_SMBCHARGER
 extern int set_usb_charge_mode_par;
+#else
+static int set_usb_charge_mode_par;
+#endif
 int ist30xx_log_level = IST30XX_LOG_LEVEL;
 
 static bool disable_keys_function = false;

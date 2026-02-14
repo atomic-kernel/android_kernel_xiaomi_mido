@@ -236,7 +236,11 @@ enum proximity_sensor_vendor {
 	TOTAL,
 };
 
+#ifdef CONFIG_QPNP_SMBCHARGER
 extern int set_usb_charge_mode_par;
+#else
+static int set_usb_charge_mode_par;
+#endif
 extern int TX_NUM;
 extern int RX_NUM;
 extern int SCab_1;

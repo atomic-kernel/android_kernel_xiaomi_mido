@@ -2080,8 +2080,7 @@ CONFIG_POWER_SUPPLY=y
 #
 # Qualcomm Technologies Inc Charger and Fuel Gauge support
 #
-CONFIG_QPNP_FG=y
-# CONFIG_QPNP_FG_DEBUG is not set
+# CONFIG_QPNP_FG is not set
 # CONFIG_QPNP_FG_GEN3 is not set
 # CONFIG_SMB135X_CHARGER is not set
 # CONFIG_SMB1360_CHARGER_FG is not set
@@ -2090,12 +2089,12 @@ CONFIG_QPNP_FG=y
 # CONFIG_QPNP_SMB2 is not set
 # CONFIG_QPNP_SMB5 is not set
 # CONFIG_SMB138X_CHARGER is not set
-CONFIG_QPNP_SMBCHARGER=y
+# CONFIG_QPNP_SMBCHARGER is not set
 # CONFIG_QPNP_QNOVO is not set
 # CONFIG_QPNP_VM_BMS is not set
 # CONFIG_QPNP_LINEAR_CHARGER is not set
 # CONFIG_QPNP_TYPEC is not set
-CONFIG_QPNP_QG=y
+# CONFIG_QPNP_QG is not set
 # CONFIG_SMB1390_CHARGE_PUMP is not set
 
 #
