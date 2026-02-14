@@ -950,7 +950,11 @@ static int pil_notify_aop(struct pil_desc *desc, char *status)
 	pkt.size = MAX_LEN;
 	pkt.data = mbox_msg;
 
+#ifdef CONFIG_MAILBOX
 	return mbox_send_message(desc->mbox, &pkt);
+#else
+	return 0;
+#endif
 }
 
 /* Synchronize request_firmware() with suspend */
