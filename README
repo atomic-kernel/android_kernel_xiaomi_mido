@@ -4,6 +4,11 @@ make ARCH=arm64 LLVM=1 LLVM_IAS=1 CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE
 make ARCH=arm64 LLVM=1 LLVM_IAS=1 CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_ARM32=arm-linux-gnueabihf- -j$((2*$(nproc))) Image-dtb
 ```
 
+CONFIG_DEVFREQ_SIMPLE_DEV: 关了过一会儿会自动重启
+CONFIG_QCOM_KGSL : 关闭后屏幕不显示，adb可以连接
+CONFIG_FB_MSM &&  CONFIG_MSM_MDSS_PLL ：关闭后屏幕不显示，adb可以连接
+CONFIG_MSM_MDSS_PLL : 仅关闭起不来
+
 
 
         Linux kernel release 4.x <http://kernel.org/>
