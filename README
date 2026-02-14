@@ -8,6 +8,8 @@ CONFIG_DEVFREQ_SIMPLE_DEV: 关了过一会儿会自动重启
 CONFIG_QCOM_KGSL : 关闭后屏幕不显示，adb可以连接
 CONFIG_FB_MSM &&  CONFIG_MSM_MDSS_PLL ：关闭后屏幕不显示，adb可以连接
 CONFIG_MSM_MDSS_PLL : 仅关闭起不来
+CONFIG_HDCP_QSEECOM && CONFIG_QSEECOM :关了起不来
+CONFIG_THERMAL: 关了起不来
 
 
 
