@@ -1288,12 +1288,14 @@ bool bam_pipe_check_zlt(void *base, u32 pipe)
 		return false;
 	}
 
+#ifdef CONFIG_SPS_SUPPORT_NDP_BAM
 	if (bam_read_reg_field(base, P_HALT, pipe, P_HALT_P_LAST_DESC_ZLT)) {
 		SPS_DBG(dev,
 			"sps:%s:bam=0x%pK(va).pipe=%d: the last desc is ZLT.",
 			__func__, base, pipe);
 		return true;
 	}
+#endif
 
 	SPS_DBG(dev,
 		"sps:%s:bam=0x%pK(va).pipe=%d: the last desc is not ZLT.",
@@ -1314,12 +1316,14 @@ bool bam_pipe_check_pipe_empty(void *base, u32 pipe)
 		return false;
 	}
 
+#ifdef CONFIG_SPS_SUPPORT_NDP_BAM
 	if (bam_read_reg_field(base, P_HALT, pipe, P_HALT_P_PIPE_EMPTY)) {
 		SPS_DBG(dev,
 			"sps:%s:bam=0x%pK(va).pipe=%d: desc FIFO is empty.",
 			__func__, base, pipe);
 		return true;
 	}
+#endif
 
 	SPS_DBG(dev,
 		"sps:%s:bam=0x%pK(va).pipe=%d: desc FIFO is not empty.",

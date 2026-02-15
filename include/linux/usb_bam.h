@@ -523,12 +523,12 @@ static inline bool usb_bam_get_prod_granted(enum usb_ctrl bam_type)
 	return false;
 }
 
-int usb_bam_alloc_fifos(enum usb_ctrl cur_bam, u8 idx)
+static inline int usb_bam_alloc_fifos(enum usb_ctrl cur_bam, u8 idx)
 {
 	return false;
 }
 
-int usb_bam_free_fifos(enum usb_ctrl cur_bam, u8 idx)
+static inline int usb_bam_free_fifos(enum usb_ctrl cur_bam, u8 idx)
 {
 	return false;
 }
@@ -542,7 +542,7 @@ static inline bool msm_bam_hsic_lpm_ok(void) { return true; }
 static inline bool msm_bam_hsic_host_pipe_empty(void) { return true; }
 static inline bool msm_usb_bam_enable(enum usb_ctrl ctrl, bool bam_enable)
 { return true; }
-int msm_do_bam_disable_enable(enum usb_ctrl ctrl) { return true; }
+static inline int msm_do_bam_disable_enable(enum usb_ctrl ctrl) { return true; }
 
 #endif
 
