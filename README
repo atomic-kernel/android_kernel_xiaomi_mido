@@ -13,6 +13,7 @@ CONFIG_THERMAL: 关了起不来
 CONFIG_UIO_MSM_SHAREDMEM: 关了屏幕触控不行???
 CONFIG_ION : 关了起不来
 CONFIG_QCOM_SPS_DMA: 关了屏幕触控不行??
+CONFIG_MD: 关了起不来
 
 
 
