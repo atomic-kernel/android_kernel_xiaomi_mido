@@ -15,6 +15,7 @@ CONFIG_ION : 关了起不来
 CONFIG_QCOM_SPS_DMA: 关了屏幕触控不行??
 CONFIG_MD: 关了起不来
 CONFIG_QCOM_BUS_SCALING: 关了开机蓝屏，起不来
+CONFIG_INPUT_QPNP_POWER_ON: 关了之后电源按钮没反应
 
 
 
