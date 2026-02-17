@@ -25,6 +25,8 @@ CONFIG_I2C_MSM_V2: 关了屏幕触控不行
 CONFIG_QCOM_LAZY_MAPPING: 关了从第二屏开始黑屏
 CONFIG_QPNP_REVID: 关了卡第一屏
 CONFIG_MSM_APM: 锁屏后再亮屏会挂
+CONFIG_CGROUP_BPF: 关了卡第二屏
+CONFIG_COMPAT: 关了卡第一屏
 
 
 
