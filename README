@@ -28,6 +28,14 @@ CONFIG_MSM_APM: 锁屏后再亮屏会挂
 CONFIG_CGROUP_BPF: 关了卡第二屏
 CONFIG_COMPAT: 关了卡第一屏
 CONFIG_PM: 关了锁屏后无法再亮屏
+CONFIG_MSM_SMD: 关了卡第一屏
+CONFIG_MSM_RPM_SMD: 关了卡第一屏
+CONFIG_MSM_SMP2P: 锁屏后再唤醒会panic
+CONFIG_MSM_PIL_SSR_GENERIC: 关了卡第一屏
+CONFIG_MSM_SYSMON_COMM: 关了后启动之后过一会儿panic
+CONFIG_MSM_TZ_SMMU: 关了第一屏反复重启
+CONFIG_QCOM_SECURE_BUFFER : 关了第一屏反复重启
+CONFIG_QCOM_SCM: 关了卡第一屏
 
 
 
