@@ -36,6 +36,7 @@ CONFIG_MSM_SYSMON_COMM: 关了后启动之后过一会儿panic
 CONFIG_MSM_TZ_SMMU: 关了第一屏反复重启
 CONFIG_QCOM_SECURE_BUFFER : 关了第一屏反复重启
 CONFIG_QCOM_SCM: 关了卡第一屏
+CONFIG_MSM_SPM: 关了锁屏后再唤醒有概率复位
 
 
 
