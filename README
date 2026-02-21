@@ -37,6 +37,8 @@ CONFIG_MSM_TZ_SMMU: 关了第一屏反复重启
 CONFIG_QCOM_SECURE_BUFFER : 关了第一屏反复重启
 CONFIG_QCOM_SCM: 关了卡第一屏
 CONFIG_MSM_SPM: 关了锁屏后再唤醒有概率复位
+CONFIG_TOUCHSCREEN_FT5435: 关闭屏幕触控不行
+CONFIG_MFD_SPMI_PMIC: 关闭第二屏黑屏
 
 
 
