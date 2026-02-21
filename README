@@ -27,6 +27,7 @@ CONFIG_QPNP_REVID: 关了卡第一屏
 CONFIG_MSM_APM: 锁屏后再亮屏会挂
 CONFIG_CGROUP_BPF: 关了卡第二屏
 CONFIG_COMPAT: 关了卡第一屏
+CONFIG_PM: 关了锁屏后无法再亮屏
 
 
 

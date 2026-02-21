@@ -3072,7 +3072,9 @@ static struct platform_driver i2c_msm_driver = {
 
 static int i2c_msm_init(void)
 {
+#ifdef CONFIG_PM
 	register_pm_notifier(&pm_notifier_callback_nb);
+#endif
 	return platform_driver_register(&i2c_msm_driver);
 }
 subsys_initcall(i2c_msm_init);
