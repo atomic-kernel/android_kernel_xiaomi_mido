@@ -870,7 +870,7 @@ int kgsl_pwrscale_init(struct device *dev, const char *governor)
 					= pwrscale->freq_table;
 
 		pwrscale->bus_devfreq = devfreq_add_device(device->busmondev,
-			&pwrscale->bus_profile.profile, "gpubw_mon", NULL);
+			&pwrscale->bus_profile.profile, "performance", NULL);
 		if (IS_ERR(pwrscale->bus_devfreq))
 			pwrscale->bus_devfreq = NULL;
 	}
