@@ -1201,6 +1201,7 @@ static int pil_tz_driver_probe(struct platform_device *pdev)
 	}
 	d->desc.signal_aop = of_property_read_bool(pdev->dev.of_node,
 						"qcom,signal-aop");
+#ifdef CONFIG_MAILBOX
 	if (d->desc.signal_aop) {
 		d->desc.cl.dev = &pdev->dev;
 		d->desc.cl.tx_block = true;
@@ -1214,6 +1215,7 @@ static int pil_tz_driver_probe(struct platform_device *pdev)
 			goto err_ramdump;
 		}
 	}
+#endif
 
 	d->ramdump_dev = create_ramdump_device(d->subsys_desc.name,
 								&pdev->dev);

@@ -72,10 +72,10 @@ static void sdhci_dump_state(struct sdhci_host *host)
 		mmc_hostname(mmc), host->clock,
 		mmc->claimer->comm, host->pwr);
 	#endif
-	pr_info("%s: rpmstatus[pltfm](runtime-suspend:usage_count:disable_depth)(%d:%d:%d)\n",
-		mmc_hostname(mmc), mmc->parent->power.runtime_status,
-		atomic_read(&mmc->parent->power.usage_count),
-		mmc->parent->power.disable_depth);
+	//pr_info("%s: rpmstatus[pltfm](runtime-suspend:usage_count:disable_depth)(%d:%d:%d)\n",
+	//	mmc_hostname(mmc), mmc->parent->power.runtime_status,
+	//	atomic_read(&mmc->parent->power.usage_count),
+	//	mmc->parent->power.disable_depth);
 }
 
 static void sdhci_dumpregs(struct sdhci_host *host)

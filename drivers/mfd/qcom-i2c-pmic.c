@@ -707,7 +707,7 @@ static int i2c_pmic_resume(struct device *dev)
 }
 static int i2c_pmic_suspend_noirq(struct device *dev)
 {
-	return 0
+	return 0;
 }
 #endif
 static const struct dev_pm_ops i2c_pmic_pm_ops = {

@@ -64,8 +64,10 @@ struct pil_desc {
 	bool clear_fw_region;
 	u32 subsys_vmid;
 	bool signal_aop;
+#ifdef CONFIG_MAILBOX
 	struct mbox_client cl;
 	struct mbox_chan *mbox;
+#endif
 	struct md_ss_toc *minidump_ss;
 	struct md_ss_toc *minidump_pdr;
 	int minidump_id;

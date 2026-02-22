@@ -11,6 +11,7 @@
  *
  */
 
+#include <linux/slab.h>
 #define CREATE_TRACE_POINTS
 #include "msm_vidc_common.h"
 #define MAX_SSR_STRING_LEN 10

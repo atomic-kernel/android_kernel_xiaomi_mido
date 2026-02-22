@@ -1,3 +1,52 @@
+build:
+```bash
+make ARCH=arm64 LLVM=1 LLVM_IAS=1 CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_ARM32=arm-linux-gnueabihf- -j$((2*$(nproc))) mido_defconfig
+make ARCH=arm64 LLVM=1 LLVM_IAS=1 CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_ARM32=arm-linux-gnueabihf- -j$((2*$(nproc))) Image-dtb
+```
+
+CONFIG_DEVFREQ_SIMPLE_DEV: 关了过一会儿会自动重启
+CONFIG_QCOM_KGSL : 关闭后屏幕不显示，adb可以连接
+CONFIG_FB_MSM &&  CONFIG_MSM_MDSS_PLL ：关闭后屏幕不显示，adb可以连接
+CONFIG_MSM_MDSS_PLL : 仅关闭起不来
+CONFIG_HDCP_QSEECOM && CONFIG_QSEECOM :关了起不来
+CONFIG_THERMAL: 关了起不来
+CONFIG_UIO_MSM_SHAREDMEM: 关了屏幕触控不行???
+CONFIG_ION : 关了起不来
+CONFIG_QCOM_SPS_DMA: 关了屏幕触控不行??
+CONFIG_MD: 关了起不来
+CONFIG_QCOM_BUS_SCALING: 关了开机蓝屏，起不来
+CONFIG_INPUT_QPNP_POWER_ON: 关了之后电源按钮没反应
+CONFIG_SPS_SUPPORT_NDP_BAM: 仅关闭起不来
+CONFIG_SPS && CONFIG_SPS_SUPPORT_NDP_BAM: 关闭屏幕触控不行
+CONFIG_REGULATOR_QPNP_LABIBB: 关了屏幕不显示
+CONFIG_QTI_MPM: 关了卡第一屏
+CONFIG_SPMI_MSM_PMIC_ARB: 关了屏幕不显示
+CONFIG_I2C_MSM_V2: 关了屏幕触控不行
+CONFIG_QCOM_LAZY_MAPPING: 关了从第二屏开始黑屏
+CONFIG_QPNP_REVID: 关了卡第一屏
+CONFIG_MSM_APM: 锁屏后再亮屏会挂
+CONFIG_CGROUP_BPF: 关了卡第二屏
+CONFIG_COMPAT: 关了卡第一屏
+CONFIG_PM: 关了锁屏后无法再亮屏
+CONFIG_MSM_SMD: 关了卡第一屏
+CONFIG_MSM_RPM_SMD: 关了卡第一屏
+CONFIG_MSM_SMP2P: 锁屏后再唤醒会panic
+CONFIG_MSM_PIL_SSR_GENERIC: 关了卡第一屏
+CONFIG_MSM_SYSMON_COMM: 关了后启动之后过一会儿panic
+CONFIG_MSM_TZ_SMMU: 关了第一屏反复重启
+CONFIG_QCOM_SECURE_BUFFER : 关了第一屏反复重启
+CONFIG_QCOM_SCM: 关了卡第一屏
+CONFIG_MSM_SPM: 关了锁屏后再唤醒有概率复位
+CONFIG_TOUCHSCREEN_FT5435: 关闭屏幕触控不行
+CONFIG_MFD_SPMI_PMIC: 关闭第二屏黑屏
+CONFIG_REGULATOR_MSM_GFX_LDO: 关闭卡第一屏
+CONFIG_REGULATOR_MEM_ACC: 关闭卡第一屏
+CONFIG_REGULATOR_CPR4_APSS: 锁屏再唤醒会Panic
+CONFIG_REGULATOR_RPM_SMD: 关闭卡第一屏
+CONFIG_REGULATOR_SPM: 锁屏再唤醒会Panic
+
+
+
         Linux kernel release 4.x <http://kernel.org/>
 
 These are the release notes for Linux version 4.  Read them carefully,
